@@ -1,0 +1,63 @@
+<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Главное окно" Height="400" Width="600">
+    <DockPanel>
+
+        <!-- Меню -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Цвет фона"
+                      MouseEnter="Menu_MouseEnter" Tag="Меню: Цвет фона">
+                <MenuItem Header="Красный" Tag="red"
+                          Click="ColorMenu_Click"
+                          MouseEnter="MenuItem_MouseEnter"/>
+                <MenuItem Header="Зелёный" Tag="green"
+                          Click="ColorMenu_Click"
+                          MouseEnter="MenuItem_MouseEnter"/>
+                <MenuItem Header="Синий" Tag="blue"
+                          Click="ColorMenu_Click"
+                          MouseEnter="MenuItem_MouseEnter"/>
+            </MenuItem>
+            <MenuItem Header="О разработчике"
+                      Click="About_Click"
+                      MouseEnter="MenuItem_MouseEnter"
+                      Tag="Меню: О разработчике"/>
+            <MenuItem Header="Закрыть"
+                      Click="Close_Click"
+                      MouseEnter="MenuItem_MouseEnter"
+                      Tag="Меню: Закрыть окно"/>
+        </Menu>
+
+        <!-- Панель инструментов -->
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Красный" Tag="red"
+                    Click="ColorMenu_Click"
+                    MouseEnter="MenuItem_MouseEnter"/>
+            <Button Content="Зелёный" Tag="green"
+                    Click="ColorMenu_Click"
+                    MouseEnter="MenuItem_MouseEnter"/>
+            <Button Content="Синий" Tag="blue"
+                    Click="ColorMenu_Click"
+                    MouseEnter="MenuItem_MouseEnter"/>
+            <Button Content="О разработчике"
+                    Click="About_Click"
+                    MouseEnter="MenuItem_MouseEnter"
+                    Tag="Кнопка: О разработчике"/>
+            <Button Content="Закрыть"
+                    Click="Close_Click"
+                    MouseEnter="MenuItem_MouseEnter"
+                    Tag="Кнопка: Закрыть окно"/>
+        </ToolBar>
+
+        <!-- Строка состояния -->
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusText" Text="Готово"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <!-- Основная область -->
+        <Grid x:Name="MainGrid" Background="White"/>
+
+    </DockPanel>
+</Window>
